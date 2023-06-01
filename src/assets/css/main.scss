@@ -1,0 +1,199 @@
+.container {
+  border-radius: 10px !important;
+  box-shadow: 0 5px 15px $dark-color !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+}
+.center {
+  @include align-center();
+}
+.card {
+  @extend .container;
+  background: $secondary-color !important;
+}
+.dark {
+  @extend .container;
+  background: $dark-color !important;
+}
+.gradient {
+  @extend .container;
+  background: linear-gradient(
+    334deg,
+    $primary-color,
+    $accent-color,
+    $dark-color
+  );
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  text-align: center;
+  color: $secondary-color;
+  text-shadow: 4px 4px 2px $dark-color;
+  font-size: 45px !important;
+
+  span {
+    font-size: 50px;
+    color: $highlight-color;
+    text-shadow: 4px 4px 2px $dark-color;
+  }
+}
+.title {
+  text-align: center;
+  margin-top: -1.5rem;
+  padding: 10px 20px;
+  color: $secondary-color;
+  background: $primary-color;
+  border-radius: 5px;
+  text-shadow: 1px 2px 2px $highlight-color;
+}
+
+.btn {
+  margin-top: 3rem;
+  background: $secondary-color;
+  color: $dark-color;
+  padding: 10px 35px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 1px 5px $dark-color;
+  border-radius: 5px;
+  transition: 1000ms;
+  text-shadow: 1px 2px 2px $dark-color;
+
+  &:hover {
+    transform: scale(0.9);
+    color: $secondary-color;
+    box-shadow: 0 5px 10px $secondary-color;
+    background: $dark-color;
+    text-shadow: 1px 2px 2px $secondary-color;
+  }
+}
+
+.list-items {
+  max-height: 360px;
+  overflow-y: scroll;
+  text-align: center;
+
+  div {
+    @include list-item;
+  }
+}
+
+.info-quiz {
+  p {
+    @include list-item;
+    margin: 1rem 1rem 0;
+    padding: 5px 10px;
+
+    b {
+      color: $primary-color;
+    }
+  }
+}
+
+.arrow-icon {
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  color: $secondary-color !important;
+  background: $highlight-color;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 1000ms;
+  position: absolute;
+  top: 1.5rem;
+
+  &:hover {
+    color: $dark-color !important;
+    background: $accent-color;
+    transform: scale(0.9);
+    box-shadow: 0 5px 10px $dark-color inset;
+  }
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-evenly;
+  p {
+    color: $secondary-color;
+    font-size: 11px;
+    b {
+      color: $primary-color;
+    }
+  }
+}
+.complete-btn {
+  color: $highlight-color;
+  font-size: 14px;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.option {
+  margin: 8px;
+  border: 2px solid $highlight-color;
+  border-radius: 7px;
+  padding: 8px;
+  width: 106px;
+  height: 80px;
+  transition: 2s;
+
+  &:hover {
+    background: $accent-color;
+  }
+  .text {
+    color: $secondary-color;
+    font-size: 11px;
+  }
+}
+
+.option.selected {
+  background: $accent-color;
+  .text {
+    color: $dark-color;
+  }
+}
+.box {
+  width: 15px;
+  height: 7px;
+  margin: 1rem 0;
+}
+.result-box {
+  @include align-center();
+  flex-direction: column;
+  margin: 2rem 0;
+  width: 25%;
+  padding: 0.5rem;
+  color: $secondary-color;
+  background: $primary-color;
+  border: 1px solid $accent-color;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px $accent-color inset;
+  p {
+    font-size: 12px;
+  }
+}
+.result-btn {
+  color: $secondary-color;
+  background: $accent-color !important;
+  font-size: 14px;
+  padding: 1rem 2rem !important;
+}

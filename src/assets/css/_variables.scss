@@ -1,0 +1,24 @@
+$primary-color: #a0d2eb;
+$secondary-color: #e5eaf5;
+$accent-color: #d0bdf4;
+$highlight-color: #845bb3;
+$dark-color: #494d5f;
+
+@mixin align-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin list-item() {
+  color: $secondary-color;
+  background: $highlight-color;
+  margin-top: 1rem;
+  border: 2px dotted $dark-color;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: 1000ms;
+  &:hover {
+    background: $accent-color;
+  }
+}
