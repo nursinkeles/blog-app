@@ -1,8 +1,8 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "./store";
-import { initialState, ApiStatus } from "../types/Type";
-import { createUser } from "../services/api";
+import { RootState } from "../store";
+import { initialState, ApiStatus } from "../../types/Type";
+import { createUser } from "../../services/apiService";
 
 export const userSlice = createSlice({
   name: "user",

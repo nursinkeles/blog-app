@@ -164,6 +164,50 @@
         "email": "jane@example.com"
       },
       "id": 8
+    },
+    {
+      "title": "New Post",
+      "content": "Lorem ipsum dolor sit amet...",
+      "date": "15.06.2023",
+      "comments": [],
+      "author": {
+        "name": "John Smith",
+        "email": "john@example.com"
+      },
+      "id": 9
+    },
+    {
+      "title": "New Post",
+      "content": "Lorem ipsum dolor sit amet...",
+      "date": "15.06.2023",
+      "comments": [],
+      "author": {
+        "name": "John Smith",
+        "email": "john@example.com"
+      },
+      "id": 10
+    },
+    {
+      "title": "New Post",
+      "content": "Lorem ipsum dolor sit amet...",
+      "date": "15.06.2023",
+      "comments": [],
+      "author": {
+        "name": "John Smith",
+        "email": "john@example.com"
+      },
+      "id": 11
+    },
+    {
+      "title": "New Post",
+      "content": "Lorem ipsum dolor sit amet...",
+      "date": "15.06.2023",
+      "comments": [],
+      "author": {
+        "name": "John Smith",
+        "email": "john@example.com"
+      },
+      "id": 12
     }
   ]
 }

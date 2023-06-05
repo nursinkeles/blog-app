@@ -1,8 +1,8 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "./store";
-import { initialState, ApiStatus, Article } from "../types/Type";
-import { fetchArticles } from "../services/api";
+import { RootState } from "../store";
+import { initialState, ApiStatus, Article } from "../../types/Type";
+import { fetchArticles } from "../../services/apiService";
 
 export const articleSlice = createSlice({
   name: "article",
