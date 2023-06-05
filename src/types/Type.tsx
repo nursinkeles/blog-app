@@ -8,11 +8,6 @@ export interface HeaderProps {
   currentRoute: CurrentRoute | undefined;
 }
 
-export interface ButtonProps {
-  text: string;
-  onClick: () => void;
-}
-
 export enum ApiStatus {
   IDLE = "idle",
   LOADING = "loading",
@@ -20,41 +15,61 @@ export enum ApiStatus {
   FAILED = "failed",
 }
 
-export interface Category {
+export interface Article {
   id: number;
+  title: string;
+  content: string;
+  date: string;
+  comments: Comment[];
+  author: Author;
+}
+
+export interface Comment {
+  id: number;
+  content: string;
+}
+
+export interface Author {
   name: string;
+  email: string;
 }
 
-export interface CategoryListProps {
-  categories: Category[];
-  onCategoryClick: (categoryId: number) => void;
-}
-export type Answer = {
-  answer: string;
-  isCorrect: boolean | null;
-};
-
-interface QuizState {
-  items: any[];
-  status: "idle" | "loading" | "succeeded" | "failed";
-  error?: string;
-  selectedCategoryId?: number;
-  selectedDifficulty?: string;
+export interface RootState {
+  article: ArticleState;
 }
 
-export const initialState: QuizState = {
+export interface ArticleState {
+  items: Article[];
+  status: ApiStatus;
+  error?: string | null;
+}
+
+export const initialState: ArticleState = {
   items: [],
   status: ApiStatus.IDLE,
-  selectedCategoryId: undefined,
-  selectedDifficulty: undefined,
+  error: null,
 };
 
-export interface QuizState2 {
-  items: any[];
-  status: "idle" | "loading" | "succeeded" | "failed";
-  error?: string;
-  answers: Answer[];
+export interface Post {
+  id?: number;
+  title: string;
+  content: string;
+  date: string;
+  comments: Comment[];
+  author: Author;
 }
+
+export interface PostState {
+  items: Post[];
+  status: ApiStatus;
+  error: string | null;
+}
+
+export const postInitialState: PostState = {
+  items: [],
+  status: ApiStatus.IDLE,
+  error: null,
+};
 
 export interface QuestionRequestParams {
   amount: number;
@@ -81,21 +96,3 @@ export type RouteType = {
 export type ErrorProps = {
   text: string | undefined;
 };
-
-export type ArrowButtonProps = {
-  direction: "left" | "right";
-  onClick: () => void;
-};
-
-export type QuestionHeaderItem = {
-  title: string;
-  value: string;
-};
-
-export type QuestionHeaderProps = {
-  object: QuestionHeaderItem[];
-};
-
-export interface CountdownProps {
-  setIsTimeUp: React.Dispatch<React.SetStateAction<boolean>>;
-}

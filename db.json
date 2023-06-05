@@ -1,15 +1,169 @@
- {
+{
   "users": [
     {
       "id": 1,
-      "username": "john",
-      "password": "password123"
+      "username": "John Doe",
+      "password": "john123",
+      "email": "john@example.com"
     },
     {
       "id": 2,
-      "username": "jane",
-      "password": "password456"
+      "username": "Jane Smith",
+      "password": "jane123",
+      "email": "jane@example.com"
+    },
+    {
+      "id": 3,
+      "username": "Mark Johnson",
+      "password": "mark123",
+      "email": "mark@example.com"
+    },
+    {
+      "id": 4,
+      "username": "Sarah Williams",
+      "password": "sarah123",
+      "email": "sarah@example.com"
+    },
+    {
+      "id": 5,
+      "username": "Michael Brown",
+      "password": "michael123",
+      "email": "michael@example.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lorem Ipsum Dolor Sit Amet",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "date": "10.06.2023",
+      "comments": [
+        {
+          "id": 1,
+          "content": "Yorum 1"
+        },
+        {
+          "id": 2,
+          "content": "Yorum 2"
+        }
+      ],
+      "author": {
+        "name": "John Doe",
+        "email": "john@example.com"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Nullam Vitae Eros",
+      "content": "Nullam vitae eros ut elit dapibus ullamcorper.",
+      "date": "11.06.2023",
+      "comments": [
+        {
+          "id": 3,
+          "content": "Yorum 1"
+        },
+        {
+          "id": 4,
+          "content": "Yorum 2"
+        }
+      ],
+      "author": {
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Fusce Varius Nisi",
+      "content": "Fusce varius nisi vel felis feugiat dictum.",
+      "date": "12.06.2023",
+      "comments": [
+        {
+          "id": 5,
+          "content": "Yorum 1"
+        },
+        {
+          "id": 6,
+          "content": "Yorum 2"
+        }
+      ],
+      "author": {
+        "name": "Mark Johnson",
+        "email": "mark@example.com"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Pellentesque Auctor Justo",
+      "content": "Pellentesque auctor justo eu tempor fringilla.",
+      "date": "13.06.2023",
+      "comments": [
+        {
+          "id": 7,
+          "content": "Yorum 1"
+        },
+        {
+          "id": 8,
+          "content": "Yorum 2"
+        }
+      ],
+      "author": {
+        "name": "Sarah Williams",
+        "email": "sarah@example.com"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Vestibulum In Diam",
+      "content": "Vestibulum in diam euismod, cursus nisl non, dapibus leo.",
+      "date": "14.06.2023",
+      "comments": [
+        {
+          "id": 9,
+          "content": "Yorum 1"
+        },
+        {
+          "id": 10,
+          "content": "Yorum 2"
+        }
+      ],
+      "author": {
+        "name": "Michael Brown",
+        "email": "michael@example.com"
+      }
+    },
+    {
+      "title": "Lorem Ipsum",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tristique diam in vestibulum.",
+      "date": "03.06.2023",
+      "comments": [],
+      "author": {
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      },
+      "id": 6
+    },
+    {
+      "title": "Lorem Ipsum22275",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tristique diam in vestibulum.",
+      "date": "03.06.2023",
+      "comments": [],
+      "author": {
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      },
+      "id": 7
+    },
+    {
+      "title": "Lorem Ipsum22275",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tristique diam in vestibulum.",
+      "date": "03.06.2023",
+      "comments": [],
+      "author": {
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      },
+      "id": 8
     }
   ]
 }
-
