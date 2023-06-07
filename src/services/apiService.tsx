@@ -10,6 +10,10 @@ export const fetchPosts = createAsyncThunk("posts/fetchPosts", () =>
   fetchData(`${process.env.REACT_APP_API_BASE_ENDPOINT}/posts`)
 );
 
+export const fetchUsers = createAsyncThunk("users/fetchUsers", () =>
+  fetchData(`${process.env.REACT_APP_API_BASE_ENDPOINT}/users`)
+);
+
 export const createUser = createAsyncThunk(
   "users/createUser",
   async (userData: Object) => {

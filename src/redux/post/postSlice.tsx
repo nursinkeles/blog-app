@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
 import { ApiStatus, Post, postInitialState } from "../../types/Type";
 import { createPost, fetchPosts } from "../../services/apiService";
 import { RootState } from "../store";

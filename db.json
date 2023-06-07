@@ -29,6 +29,24 @@
       "username": "Michael Brown",
       "password": "michael123",
       "email": "michael@example.com"
+    },
+    {
+      "username": "john_doe",
+      "password": "123456",
+      "email": "john@example.com",
+      "id": 6
+    },
+    {
+      "username": "john_doe",
+      "password": "123456",
+      "email": "john@example.com",
+      "id": 7
+    },
+    {
+      "username": "john_doe",
+      "password": "123456",
+      "email": "john@example.com",
+      "id": 8
     }
   ],
   "posts": [

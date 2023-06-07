@@ -71,21 +71,22 @@ export const postInitialState: PostState = {
   error: null,
 };
 
-export interface QuestionRequestParams {
-  amount: number;
-  difficulty: string;
-  type: string;
-  category: number;
-  [key: string]: string | number;
+export interface User {
+  username: string;
+  password: string;
+  email: string;
 }
 
-export type Question = {
-  category: string;
-  type: string;
-  difficulty: string;
-  question: string;
-  correct_answer: string;
-  incorrect_answers: string[];
+export interface UserState {
+  items: User[];
+  status: ApiStatus;
+  error: string | null;
+}
+
+export const userInitialState: UserState = {
+  items: [],
+  status: ApiStatus.IDLE,
+  error: null,
 };
 
 export type RouteType = {

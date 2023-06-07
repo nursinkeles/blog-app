@@ -1,7 +1,7 @@
 import useCustomDispatch from "../hooks/useCustomDispatch";
 
 const HomePage = () => {
-  const { status, status2, articles, posts, handleAddPost } =
+  const { articles, posts, users, handleAddPost, handleAddUser } =
     useCustomDispatch();
 
   return (
@@ -11,6 +11,7 @@ const HomePage = () => {
         <p key={article.id}>{article.title}</p>
       ))}
       <button onClick={handleAddPost}>Add Post</button>
+      <button onClick={handleAddUser}>Add User</button>
     </div>
   );
 };
