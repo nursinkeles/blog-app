@@ -1,3 +1,5 @@
+import { FormikValues } from "formik";
+
 export interface CurrentRoute {
   pathname: string;
   title?: string;
@@ -97,3 +99,64 @@ export type RouteType = {
 export type ErrorProps = {
   text: string | undefined;
 };
+
+export interface InputProps {
+  id: string;
+  name: string;
+  type: string;
+  label: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: any;
+  placeholder: string;
+}
+
+export interface ButtonProps {
+  type: "button" | "submit" | "reset" | undefined;
+  variant: "text" | "outlined" | "contained";
+  color:
+    | "inherit"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "warning"
+    | "error"
+    | "info";
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+export interface RegisterFormValues {
+  username: string;
+  password: string;
+  confirmPassword: string;
+  email: string;
+}
+
+export interface LoginFormValues {
+  username: string;
+  password: string;
+}
+
+export interface AuthFormProps {
+  initialValues: FormikValues;
+  validationSchema: any;
+  onSubmit: (values: FormikValues) => void;
+  inputFields: Array<{
+    id: string;
+    name: string;
+    type: string;
+    label: string;
+    placeholder: string;
+    [key: string]: any;
+  }>;
+  buttonText: string;
+}
+
+export interface InputField {
+  id: string;
+  name: string;
+  type: string;
+  label: string;
+  placeholder: string;
+}

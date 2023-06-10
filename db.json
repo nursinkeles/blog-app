@@ -47,6 +47,24 @@
       "password": "123456",
       "email": "john@example.com",
       "id": 8
+    },
+    {
+      "username": "nur-sin_sena@hotmail.com",
+      "password": "asasas",
+      "email": "nur-sin_sena@hotmail.com",
+      "id": 9
+    },
+    {
+      "username": "nurşin",
+      "password": "asasas",
+      "email": "nur-sin_sena@hotmail.com",
+      "id": 10
+    },
+    {
+      "username": "nurşin2",
+      "password": "asdasd",
+      "email": "nur-sin_sena@hotmail.com",
+      "id": 11
     }
   ],
   "posts": [

@@ -29,7 +29,6 @@ const useCustomDispatch = () => {
       posts: postSelector(state),
       users: userSelector(state),
     }));
-  console.log(users);
 
   useEffect(() => {
     articleStatus === ApiStatus.IDLE && dispatch(fetchArticles());
@@ -37,14 +36,7 @@ const useCustomDispatch = () => {
     userStatus === ApiStatus.IDLE && dispatch(fetchUsers());
   }, [dispatch, articleStatus, postStatus, userStatus]);
 
-  const handleAddUser = () => {
-    const userData = {
-      username: "john_doe",
-      password: "123456",
-      email: "john@example.com",
-    };
-    dispatch(createUser(userData));
-  };
+  const handleAddUser = (userData: Object) => dispatch(createUser(userData));
 
   const handleAddPost = () => {
     const newPost = {
