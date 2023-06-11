@@ -10,7 +10,13 @@ export const CustomButton: FC<ButtonProps> = ({
   onClick,
 }) => {
   return (
-    <Button type={type} variant={variant} color={color} onClick={onClick}>
+    <Button
+      type={type}
+      variant={variant}
+      color={color}
+      onClick={onClick}
+      className="btn btn-primary"
+    >
       {children}
     </Button>
   );

@@ -94,6 +94,7 @@ export const userInitialState: UserState = {
 export type RouteType = {
   pathname: string;
   component: JSX.Element;
+  title?: string;
 };
 
 export type ErrorProps = {

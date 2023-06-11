@@ -10,6 +10,13 @@ $dark-color: #18003c; //111210
   align-items: center;
 }
 
+@mixin align-center-column() {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin list-item() {
   color: $secondary-color;
   background: $highlight-color;

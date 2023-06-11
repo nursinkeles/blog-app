@@ -1,16 +1,17 @@
+import { CustomContainer } from "../components/Container";
 import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import RegisterPage from "../pages/RegisterPage";
 import { InputField, RouteType } from "../types/Type";
 
 export const ROUTE: RouteType[] = [
   {
     pathname: "/login",
-    component: <LoginPage />,
+    component: <CustomContainer />,
+    title: "Sign In",
   },
   {
     pathname: "/register",
-    component: <RegisterPage />,
+    component: <CustomContainer />,
+    title: "Sign Up",
   },
   { pathname: "/", component: <HomePage /> },
 ];

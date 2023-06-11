@@ -1,8 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ValidationSchemaOfLogin } from "../utils/ValidationSchema";
 import { LoginInputFields } from "../constants/Constant";
 import useCustomDispatch from "../hooks/useCustomDispatch";
 import AuthForm from "../components/AuthForm";
+import { Typography } from "@mui/material";
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -17,16 +18,21 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <AuthForm
-      initialValues={{
-        username: "",
-        password: "",
-      }}
-      validationSchema={ValidationSchemaOfLogin}
-      onSubmit={onSubmit}
-      inputFields={LoginInputFields}
-      buttonText="Sign In"
-    />
+    <>
+      <AuthForm
+        initialValues={{
+          username: "",
+          password: "",
+        }}
+        validationSchema={ValidationSchemaOfLogin}
+        onSubmit={onSubmit}
+        inputFields={LoginInputFields}
+        buttonText="Sign In"
+      />
+      <Typography component="p" align="center">
+        Don't have an account? <Link to="/register">Register</Link>
+      </Typography>
+    </>
   );
 };
 

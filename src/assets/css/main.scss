@@ -1,10 +1,24 @@
 .container {
   border-radius: 10px !important;
-  box-shadow: 0 5px 15px $dark-color !important;
+  box-shadow: 0 2px 5px $highlight-color !important;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2.5rem;
+  padding: 2rem 2.5rem;
+  width: 400px !important;
+  min-height: 350px;
+
+  span {
+    font-size: 14px;
+    color: $highlight-color;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: $highlight-color;
+    a {
+      color: $primary-color;
+      font-weight: 500;
+    }
+  }
 }
 .center {
   @include align-center();
@@ -13,32 +27,30 @@
   @extend .container;
   background: $secondary-color !important;
 }
-.dark {
-  @extend .container;
-  background: $dark-color !important;
+label {
+  font-size: 14px;
+  color: $dark-color;
+  font-weight: 500;
 }
-.gradient {
-  @extend .container;
-  background: linear-gradient(
-    334deg,
-    $primary-color,
-    $accent-color,
-    $dark-color
-  );
-  background-size: 180% 180%;
-  animation: gradient-animation 6s ease infinite;
-}
+form {
+  width: 80%;
+  margin: 1rem auto;
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
+  input {
+    font-size: 14px !important;
+    padding: 10px 15px !important;
+    outline: hidden !important;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+}
+.MuiTextField-root {
+  margin: 0.4rem 0 !important;
+  border-radius: 5px !important;
+  box-shadow: 0 4px 5px $accent-color !important;
+}
+.error-message {
+  color: rgb(225, 18, 18) !important;
+  font-size: 13px;
+  margin-bottom: 0.4rem;
 }
 
 .header {
@@ -64,26 +76,17 @@
 }
 
 .btn {
-  margin-top: 3rem;
-  background: $secondary-color;
-  color: $dark-color;
+  margin-top: 1rem !important;
   padding: 10px 35px;
   cursor: pointer;
   font-size: 18px;
-  box-shadow: 0 1px 5px $dark-color;
-  border-radius: 5px;
+  border-radius: 20px !important;
   transition: 1000ms;
-  text-shadow: 1px 2px 2px $dark-color;
-
-  &:hover {
-    transform: scale(0.9);
-    color: $secondary-color;
-    box-shadow: 0 5px 10px $secondary-color;
-    background: $dark-color;
-    text-shadow: 1px 2px 2px $secondary-color;
-  }
 }
-
+.btn-primary {
+  width: 100%;
+  background: $primary-color !important;
+}
 .list-items {
   max-height: 360px;
   overflow-y: scroll;
@@ -91,18 +94,6 @@
 
   div {
     @include list-item;
-  }
-}
-
-.info-quiz {
-  p {
-    @include list-item;
-    margin: 1rem 1rem 0;
-    padding: 5px 10px;
-
-    b {
-      color: $primary-color;
-    }
   }
 }
 
@@ -122,28 +113,6 @@
     background: $accent-color;
     transform: scale(0.9);
     box-shadow: 0 5px 10px $dark-color inset;
-  }
-}
-
-.question-header {
-  display: flex;
-  justify-content: space-evenly;
-  p {
-    color: $secondary-color;
-    font-size: 11px;
-    b {
-      color: $primary-color;
-    }
-  }
-}
-.complete-btn {
-  color: $highlight-color;
-  font-size: 14px;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  &:hover {
-    text-decoration: underline;
   }
 }
 
@@ -177,8 +146,7 @@
   margin: 1rem 0;
 }
 .result-box {
-  @include align-center();
-  flex-direction: column;
+  @include align-center-column();
   margin: 2rem 0;
   width: 25%;
   padding: 0.5rem;

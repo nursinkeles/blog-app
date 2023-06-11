@@ -22,7 +22,11 @@ export const Input: FC<InputProps> = ({
 
   return (
     <>
-      {label && <label htmlFor={name}>{label}</label>}
+      {label && (
+        <label htmlFor={name}>
+          {label} <sup>*</sup>
+        </label>
+      )}
       <TextField
         fullWidth
         id={id}
