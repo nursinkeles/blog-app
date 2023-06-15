@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
     const user = users.find(
       (user) => user.username === username && user.password === password
     );
-    user && navigate("/");
+    user && navigate("/home");
   };
 
   return (

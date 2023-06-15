@@ -4,7 +4,7 @@ import { InputField, RouteType } from "../types/Type";
 
 export const ROUTE: RouteType[] = [
   {
-    pathname: "/login",
+    pathname: "/",
     component: <CustomContainer />,
     title: "Sign In",
   },
@@ -13,7 +13,7 @@ export const ROUTE: RouteType[] = [
     component: <CustomContainer />,
     title: "Sign Up",
   },
-  { pathname: "/", component: <HomePage /> },
+  { pathname: "/home", component: <HomePage /> },
 ];
 
 export const RegisterInputFields: InputField[] = [

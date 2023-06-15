@@ -5,6 +5,7 @@
   padding: 2rem 2.5rem;
   width: 400px !important;
   min-height: 350px;
+  background: $secondary-color !important;
 
   span {
     font-size: 14px;
@@ -19,6 +20,12 @@
       font-weight: 500;
     }
   }
+}
+.container-center {
+  width: 100%;
+  height: 100vh;
+  background: $accent-color !important;
+  @include align-center();
 }
 .center {
   @include align-center();

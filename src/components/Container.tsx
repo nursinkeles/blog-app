@@ -8,10 +8,12 @@ export const CustomContainer = () => {
   const { currentPathname } = useCurrentRoute();
 
   return (
-    <Container className="container">
-      <Header />
-      {currentPathname === "/register" && <RegisterPage />}
-      {currentPathname === "/login" && <LoginPage />}
-    </Container>
+    <div className="container-center">
+      <Container className="container">
+        <Header />
+        {currentPathname === "/register" && <RegisterPage />}
+        {currentPathname === "/" && <LoginPage />}
+      </Container>
+    </div>
   );
 };

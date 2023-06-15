@@ -1,4 +1,5 @@
 import { FormikValues } from "formik";
+import { ChangeEvent } from "react";
 
 export interface CurrentRoute {
   pathname: string;
@@ -161,3 +162,12 @@ export interface InputField {
   label: string;
   placeholder: string;
 }
+
+export type NavBarProps = {
+  handleSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
+};
+
+export type CustomSearchProps = {
+  placeholder: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};

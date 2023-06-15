@@ -12,7 +12,7 @@ const RegisterPage: React.FC = () => {
   const onSubmit = (values: any) => {
     const { confirmPassword, ...data } = values;
     handleAddUser(data);
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -35,7 +35,7 @@ const RegisterPage: React.FC = () => {
       />
 
       <Typography component="p" align="center">
-        Already have an account? <Link to="/login">Login</Link>
+        Already have an account? <Link to="/">Login</Link>
       </Typography>
     </>
   );
