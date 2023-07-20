@@ -25,8 +25,13 @@ export interface Article {
   date: string;
   comments: Comment[];
   author: Author;
+  published_at?: string;
+  cover_image?: string;
+  description?: string;
+  user?: Object | undefined;
+  name?: string;
+  profile_image?: string;
 }
-
 export interface Comment {
   id: number;
   content: string;
@@ -170,4 +175,8 @@ export type NavBarProps = {
 export type CustomSearchProps = {
   placeholder: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+export type FilteredArticlesProps = {
+  filteredArticles: Article[];
 };

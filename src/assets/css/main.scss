@@ -30,6 +30,9 @@
 .center {
   @include align-center();
 }
+.wrap {
+  @include align-wrap();
+}
 .card {
   @extend .container;
   background: $secondary-color !important;
